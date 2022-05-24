@@ -1,5 +1,7 @@
 <?php
 
+require 'admin_users.php';
+
 /** @var \Magento\TestFramework\ObjectManager $objectManager */
 $objectManager = \Magento\TestFramework\Helper\Bootstrap::getObjectManager();
 
@@ -54,7 +56,15 @@ $uiBookmarksData = [
         'current' => 1,
         'created_at' => '2020-07-31 12:12:12',
         'updated_at' => '2020-07-31 12:12:12'
-    ]
+    ],
+    [
+        'user_id' => $admin1Id,
+        'namespace' => 'product_listing',
+        'identifier' => '_1653291353275',
+        'current' => 0,
+        'created_at' => '2020-07-31 12:12:12',
+        'updated_at' => '2020-07-31 12:12:12'
+    ],
 ];
 
 foreach ($uiBookmarksData as $uiBookmarkData) {
