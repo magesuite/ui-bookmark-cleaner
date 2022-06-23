@@ -1,5 +1,4 @@
 <?php
-
 require 'admin_users.php';
 
 /** @var \Magento\TestFramework\ObjectManager $objectManager */
@@ -15,6 +14,16 @@ $admin1Id = $admin1->getId();
 
 $admin2 = $user->loadByUsername('TestAdmin2');
 $admin2Id = $admin2->getId();
+
+$searchCriteria = $objectManager->get(\Magento\Framework\Api\SearchCriteriaBuilder::class)
+    ->addFilter('user_id', [$admin1Id, $admin2Id], 'in')
+    ->create();
+$items = $uiBookmarkRepository->getList($searchCriteria)
+    ->getItems();
+
+foreach ($items as $item) {
+    $uiBookmarkRepository->delete($item);
+}
 
 $uiBookmarksData = [
     [
