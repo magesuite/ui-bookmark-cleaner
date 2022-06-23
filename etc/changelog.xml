@@ -1,0 +1,21 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:MageSuite_Changelog:etc/changelog.xsd">
+    <module
+        id="MageSuite_UiBookmarkCleaner"
+        name="MageSuite_UiBookmarkCleaner">
+        <changelog>
+            <tag version="1.0.0" date="2021-08-25">
+                <entry>
+                    <type>INIT</type>
+                    <overview>Initial release</overview>
+                    <description></description>
+                </entry>
+            </tag>
+            <tag version="1.1.1" date="2022-06-22">
+                <entry>
+                    <type>FIX</type>
+                    <overview>[LED-2648] Reset admin bookmarks added by 3rd party extension before executing integration tests</overview>
+                </entry>
+            </tag>
+        </changelog>
+    </module>
+</config>
